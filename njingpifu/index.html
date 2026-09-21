@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>女警皮肤-热门游戏角色女警皮肤大全与获取攻略</title>
+    <meta name="description" content="本站提供海量游戏角色女警皮肤推荐，包含皮肤特效、获取方式、价格对比及玩家评价。无论是经典款还是限定款，这里都有详细攻略助你打造专属女警。">
+    <meta name="keywords" content="女警皮肤,女警皮肤大全,女警皮肤特效,女警皮肤获取,女警皮肤价格">
+    <style>
+        :root {
+            --primary: #ff5e00;
+            --secondary: #2a2a2a;
+            --accent: #00d2ff;
+            --bg-light: #f4f6f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--secondary);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .search-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,94,0,0.1) 0%, transparent 70%);
+            animation: pulse 10s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 20px rgba(255, 94, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: #e65100;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 94, 0, 0.4);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Title */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        .view-all {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* Grid Layout */
+        .skin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .skin-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skin-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .skin-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .rarity-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            backdrop-filter: blur(4px);
+        }
+
+        .rarity-legendary { background: linear-gradient(45deg, #FFD700, #FFA500); color: #000; }
+        .rarity-epic { background: linear-gradient(45deg, #DA70D6, #BA55D3); }
+        .rarity-rare { background: linear-gradient(45deg, #1E90FF, #00BFFF); }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skin-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--secondary);
+        }
+
+        .skin-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .skin-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .skin-tag {
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            background-color: var(--bg-light);
+            border-radius: 4px;
+            color: var(--text-light);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .price {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .price::before {
+            content: '¥';
+            font-size: 0.8rem;
+            margin-right: 2px;
+        }
+
+        .get-btn {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .get-btn:hover {
+            background-color: var(--primary);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+            padding: 60px 20px;
+        }
+
+        .feature-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255, 94, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .table-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 25px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--secondary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        .check-icon { color: #28a745; margin-right: 5px; }
+        .cross-icon { color: #dc3545; margin-right: 5px; }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 20px;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: #aaa;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Simplified for demo */
+            .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>🎮</span> 女警皮肤库
+            </div>
+            <nav class="nav-links">
+                <a href="#">全部皮肤</a>
+                <a href="#">最新上线</a>
+                <a href="#">限定返场</a>
+                <a href="#">获取攻略</a>
+                <a href="#">价格对比</a>
+            </nav>
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>女警皮肤</h1>
+            <p>探索所有以凯特琳（女警）为主题的精美皮肤，从经典执法者到未来科技风，打造你的专属狙击手形象。</p>
+            <div class="hero-tags">
+                <span class="tag">赛博朋克</span>
+                <span class="tag">未来守护者</span>
+                <span class="tag">海洋之星</span>
+                <span class="tag">源计划</span>
+            </div>
+            <a href="#recommend" class="cta-btn">查看推荐皮肤</a>
+        </div>
+    </section>
+
+    <main class="container" id="recommend">
+        <div class="section-header">
+            <div>
+                <h2>热门推荐</h2>
+                <p>玩家评价最高、特效最炫酷的女警皮肤合集</p>
+            </div>
+            <a href="#" class="view-all">查看全部 <span>&rarr;</span></a>
+        </div>
+
+        <div class="skin-grid">
+            <!-- Card 1 -->
+            <article class="skin-card">
+                <div class="card-image">
+                    <span class="rarity-badge rarity-legendary">传说级</span>
+                    <!-- Using picsum with seed to ensure consistent placeholder -->
+                    <img src="https://picsum.photos/seed/police1/400/300" alt="未来守护者 女警皮肤">
+                </div>
+                <div class="card-content">
+                    <h3 class="skin-title">未来守护者 凯特琳</h3>
+                    <p class="skin-desc">来自未来的超级英雄，拥有独特的机械臂和全息投影技能特效，射击时伴随能量光束。</p>
+                    <div class="skin-tags">
+                        <span class="skin-tag">科幻</span>
+                        <span class="skin-tag">特效华丽</span>
+                        <span class="skin-tag">打击感强</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">1090</span>
+                        <a href="#" class="get-btn">查看详情</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="skin-card">
+                <div class="card-image">
+                    <span class="rarity-badge rarity-epic">史诗级</span>
+                    <img src="https://picsum.photos/seed/police2/400/300" alt="源计划：觉醒 女警皮肤">
+                </div>
+                <div class="card-content">
+                    <h3 class="skin-title">源计划：觉醒 凯特琳</h3>
+                    <p class="skin-desc">源计划系列成员，装备重型战术装备，枪械和技能特效呈现冷冽的金属质感和激光束。</p>
+                    <div class="skin-tags">
+                        <span class="skin-tag">机甲</span>
+                        <span class="skin-tag">动作流畅</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">690</span>
+                        <a href="#" class="get-btn">查看详情</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="skin-card">
+                <div class="card-image">
+                    <span class="rarity-badge rarity-rare">稀有级</span>
+                    <img src="https://picsum.photos/seed/police3/400/300" alt="海军上将 女警皮肤">
+                </div>
+                <div class="card-content">
+                    <h3 class="skin-title">海军上将 凯特琳</h3>
+                    <p class="skin-desc">优雅的海军制服，技能特效带有深蓝色的水波纹和气泡，适合喜欢清爽风格的玩家。</p>
+                    <div class="skin-tags">
+                        <span class="skin-tag">制服</span>
+                        <span class="skin-tag">清爽</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">690</span>
+                        <a href="#" class="get-btn">查看详情</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="skin-card">
+                <div class="card-image">
+                    <span class="rarity-badge rarity-legendary">传说级</span>
+                    <img src="https://picsum.photos/seed/police4/400/300" alt="幻彩星之守护者 女警皮肤">
+                </div>
+                <div class="card-content">
+                    <h3 class="skin-title">幻彩星之守护者 凯特琳</h3>
+                    <p class="skin-desc">星之守护者系列的幻彩版本，技能特效在星尘与星空之间流转，极具收藏价值。</p>
+                    <div class="skin-tags">
+                        <span class="skin-tag">幻彩</span>
+                        <span class="skin-tag">星之守护者</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">1090</span>
+                        <a href="#" class="get-btn">查看详情</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="section-header" style="margin-bottom: 30px;">
+            <div>
+                <h2>为什么要选择皮肤？</h2>
+                <p>个性化你的游戏体验，让每一次射击都充满乐趣</p>
+            </div>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">✨</div>
+                <h3>视觉享受</h3>
+                <p>全新的人物建模、技能特效和语音包，带来耳目一新的视觉体验。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <h3>心理暗示</h3>
+                <p>精美的皮肤能提升操作手感，增加游戏自信，从而提高胜率。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🏆</div>
+                <h3>身份象征</h3>
+                <p>稀有皮肤是玩家品味和实力的象征，在游戏中更容易获得队友信任。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="section-header">
+            <h2>热门皮肤对比</h2>
+            <p>不同风格皮肤的特点分析</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>皮肤名称</th>
+                        <th>风格</th>
+                        <th>技能特效</th>
+                        <th>价格</th>
+                        <th>推荐指数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>未来守护者</td>
+                        <td>科幻/英雄</td>
+                        <td><span class="check-icon">✓</span>全息投影/能量</td>
+                        <td>1090</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>源计划：觉醒</td>
+                        <td>机甲/战斗</td>
+                        <td><span class="check-icon">✓</span>激光/金属</td>
+                        <td>690</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>海军上将</td>
+                        <td>制服/优雅</td>
+                        <td><span class="check-icon">✓</span>水波/气泡</td>
+                        <td>690</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>幻彩星之守护者</td>
+                        <td>魔法/幻彩</td>
+                        <td><span class="check-icon">✓</span>星尘/流转</td>
+                        <td>1090</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="container faq-section">
+        <div class="section-header">
+            <h2>常见问题 (FAQ)</h2>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">女警皮肤可以在哪里购买？</div>
+            <div class="faq-answer">
+                <p>女警皮肤通常可以在游戏内的“商城”→“英雄”→“凯特琳”标签页中购买。部分限定皮肤可能需要通过活动或抽奖获取。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">皮肤会改变英雄的技能机制吗？</div>
+            <div class="faq-answer">
+                <p>不会。皮肤只改变英雄的视觉效果、语音台词和部分动画，不会改变英雄的技能数值、伤害或玩法机制。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">如何判断皮肤是否值得入手？</div>
+            <div class="faq-answer">
+                <p>建议根据自己的游戏风格和审美来选择。如果喜欢酷炫的科技感，可以选择“未来守护者”；如果喜欢优雅的风格，“海军上将”是不错的选择。同时关注皮肤的活动折扣。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">女警皮肤库致力于为玩家提供最全面、最准确的女警皮肤资讯、获取攻略和价格对比服务。我们专注于游戏角色的个性化展示。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">最新皮肤</a></li>
+                    <li><a href="#">限时活动</a></li>
+                    <li><a href="#">价格走势</a></li>
+                    <li><a href="#">皮肤评测</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">购买指南</a></li>
+                    <li><a href="#">退换货政策</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">隐私声明</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 女警皮肤库 版权所有 | 本站内容仅供参考，游戏版权归游戏公司所有。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                  </html>
