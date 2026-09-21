@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WHa - 全球顶尖Web3与去中心化应用聚合平台。提供跨链钱包、DeFi协议、NFT市场及Web3社区导航，一站式探索未来互联网生态。">
+    <meta name="keywords" content="WHa, Web3, 去中心化, 聚合平台, 钱包, DeFi, NFT, 区块链">
+    <title>WHa - 全球Web3聚合平台与去中心化应用导航</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0b0c15;
+            --bg-card: #151725;
+            --bg-hover: #1f2235;
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --accent: #ec4899;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #2d3748;
+            --radius: 12px;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(11, 12, 21, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-ghost:hover {
+            background: var(--bg-hover);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Categories Grid */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: "→";
+            margin-left: 6px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover .card-link::after {
+            transform: translateX(4px);
+        }
+
+        /* Feature Highlight */
+        .feature-highlight {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
+            border-radius: 20px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .feature-highlight h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-highlight p {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Featured Apps List */
+        .app-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 16px 20px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .app-item:hover {
+            border-color: var(--primary);
+        }
+
+        .app-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: #2d3748;
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .app-info {
+            flex-grow: 1;
+        }
+
+        .app-name {
+            font-weight: 600;
+            display: block;
+        }
+
+        .app-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .app-tags {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+        }
+
+        .tag.hot {
+            background: rgba(236, 72, 153, 0.15);
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+            background-color: var(--bg-card);
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 16px;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-desktop {
+                display: none;
+            }
+            .stats-bar {
+                gap: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .app-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .app-tags {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">WHa</div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#defi">DeFi 协议</a></li>
+                    <li><a href="#nft">NFT 市场</a></li>
+                    <li><a href="#wallet">钱包工具</a></li>
+                    <li><a href="#community">社区资源</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-ghost">登录</button>
+                <button class="btn btn-primary">连接钱包</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索 Web3 的<br><span>无限可能</span></h1>
+                <p>WHa 是全球领先的去中心化应用聚合平台。无论您是新手还是资深玩家，我们都能为您提供安全、高效的一站式 Web3 服务入口。</p>
+                <div style="display: flex; justify-content: center; gap: 16px;">
+                    <button class="btn btn-primary" style="padding: 12px 32px; font-size: 1rem;">开始探索</button>
+                    <button class="btn btn-ghost" style="padding: 12px 32px; font-size: 1rem;">了解更多</button>
+                </div>
+                
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>集成应用</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10M+</h3>
+                        <p>月活用户</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>支持链网络</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Categories -->
+        <section class="section" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">热门分类</h2>
+                    <a href="#" class="btn btn-ghost">查看全部 &rarr;</a>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon">🏦</div>
+                        <h3>DeFi 借贷</h3>
+                        <p>提供高收益的流动性挖矿、借贷协议及资产聚合服务。</p>
+                        <a href="#" class="card-link">浏览协议</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🖼️</div>
+                        <h3>NFT 市场</h3>
+                        <p>探索数字艺术品、收藏品及虚拟土地交易平台。</p>
+                        <a href="#" class="card-link">进入市场</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Web3 钱包</h3>
+                        <p>安全存储、管理您的多链资产与私钥。</p>
+                        <a href="#" class="card-link">选择钱包</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎮</div>
+                        <h3>链游中心</h3>
+                        <p>连接游戏资产，体验边玩边赚的区块链游戏生态。</p>
+                        <a href="#" class="card-link">开始游戏</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📈</div>
+                        <h3>数据追踪</h3>
+                        <p>实时监控链上数据、Gas 费用及市场趋势。</p>
+                        <a href="#" class="card-link">查看数据</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🤝</div>
+                        <h3>DAO 社区</h3>
+                        <p>加入去中心化自治组织，参与社区治理与决策。</p>
+                        <a href="#" class="card-link">加入 DAO</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Highlight -->
+        <section class="section">
+            <div class="container">
+                <div class="feature-highlight">
+                    <h2>为什么选择 WHa？</h2>
+                    <p>我们致力于简化 Web3 的复杂交互流程，通过聚合优质协议，为您提供透明、安全且低成本的区块链体验。无需繁琐的跳转，一站式完成您的链上操作。</p>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <div class="card" style="padding: 20px; min-width: 200px; background: var(--bg-dark);">
+                            <h4 style="color: var(--primary); margin-bottom: 8px;">极简体验</h4>
+                            <p style="font-size: 0.85rem; margin: 0;">统一入口管理所有应用，告别多标签页切换。</p>
+                        </div>
+                        <div class="card" style="padding: 20px; min-width: 200px; background: var(--bg-dark);">
+                            <h4 style="color: var(--accent); margin-bottom: 8px;">安全第一</h4>
+                            <p style="font-size: 0.85rem; margin: 0;">严格的安全审计，保护您的资产与隐私数据。</p>
+                        </div>
+                        <div class="card" style="padding: 20px; min-width: 200px; background: var(--bg-dark);">
+                            <h4 style="color: #10b981; margin-bottom: 8px;">跨链支持</h4>
+                            <p style="font-size: 0.85rem; margin: 0;">无缝连接以太坊、BSC、Polygon 等主流网络。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Apps List -->
+        <section class="section" id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">精选推荐</h2>
+                </div>
+                <div class="app-list">
+                    <div class="app-item">
+                        <div class="app-icon">W</div>
+                        <div class="app-info">
+                            <span class="app-name">Wha Swap</span>
+                            <span class="app-desc">高性能去中心化交易聚合器</span>
+                        </div>
+                        <div class="app-tags">
+                            <span class="tag hot">热门</span>
+                            <span class="tag">DEX</span>
+                        </div>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">P</div>
+                        <div class="app-info">
+                            <span class="app-name">PolyVault</span>
+                            <span class="app-desc">自动化收益策略与流动性池</span>
+                        </div>
+                        <div class="app-tags">
+                            <span class="tag">DeFi</span>
+                            <span class="tag">Yield</span>
+                        </div>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">A</div>
+                        <div class="app-info">
+                            <span class="app-name">ArtChain</span>
+                            <span class="app-desc">全球最大的 NFT 收藏品市场</span>
+                        </div>
+                        <div class="app-tags">
+                            <span class="tag hot">热门</span>
+                            <span class="tag">NFT</span>
+                        </div>
+                    </div>
+                    <div class="app-item">
+                        <div class="app-icon">D</div>
+                        <div class="app-info">
+                            <span class="app-name">DeFi Dashboard</span>
+                            <span class="app-desc">个人资产概览与收益计算器</span>
+                        </div>
+                        <div class="app-tags">
+                            <span class="tag">工具</span>
+                            <span class="tag">分析</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: var(--bg-card);">
+            <div class="container">
+                <h2 class="section-title" style="margin-bottom: 30px;">常见问题</h2>
+                <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+                    <details style="background: var(--bg-dark); padding: 20px; border-radius: var(--radius); cursor: pointer;">
+                        <summary style="font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            WHa 如何确保资产安全？
+                            <span style="font-size: 1.2rem;">+</span>
+                        </summary>
+                        <p style="margin-top: 16px; color: var(--text-muted);">WHa 本身不持有用户私钥。我们推荐使用硬件钱包或经过验证的 Web3 钱包插件进行签名操作，所有交易均在用户本地完成，确保资产绝对安全。</p>
+                    </details>
+                    <details style="background: var(--bg-dark); padding: 20px; border-radius: var(--radius); cursor: pointer;">
+                        <summary style="font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            支持哪些区块链网络？
+                            <span style="font-size: 1.2rem;">+</span>
+                        </summary>
+                        <p style="margin-top: 16px; color: var(--text-muted);">目前支持以太坊、币安智能链 (BSC)、Polygon、Arbitrum、Optimism 等主流公链网络。我们持续扩展新的网络支持。</p>
+                    </details>
+                    <details style="background: var(--bg-dark); padding: 20px; border-radius: var(--radius); cursor: pointer;">
+                        <summary style="font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                            如何注册账户？
+                            <span style="font-size: 1.2rem;">+</span>
+                        </summary>
+                        <p style="margin-top: 16px; color: var(--text-muted);">WHa 采用去中心化登录方式。您只需点击右上角的“连接钱包”按钮，选择您的钱包（如 MetaMask, Phantom 等）并授权即可使用所有功能。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">WHa</div>
+                    <p>连接未来的数字世界，为您提供最便捷的 Web3 聚合服务。探索、交易、创造，从这里开始。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>平台</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">功能介绍</a></li>
+                        <li><a href="#">API 文档</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                        <li><a href="#">博客动态</a></li>
+                        <li><a href="#">安全提示</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律</h4>
+                    <ul>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">Cookie 政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 WHa Network. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
