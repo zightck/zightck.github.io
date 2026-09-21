@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="人人车官网提供专业二手车检测与交易服务。我们提供严选车源、透明报价、专业验车和无忧售后保障，致力于打造安全、可信赖的二手车购买平台。">
+    <meta name="keywords" content="人人车官网,二手车,二手车交易平台,人人车,二手车买卖,严选二手车">
+    <title>人人车官网-严选二手车交易平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b00;
+            --primary-hover: #e65100;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --bg-body: #f5f7fa;
+            --bg-white: #ffffff;
+            --border-color: #e5e5e5;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            margin-left: 4px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 107, 0, 0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffffff 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tag-icon {
+            color: var(--primary-color);
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 50px;
+            box-shadow: var(--shadow-md);
+            padding: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 32px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Value Props */
+        .features {
+            padding: 40px 0;
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 16px;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 12px;
+            background-color: #fff5f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .feature-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-link {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .section-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Car Grid */
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .car-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .car-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(255, 107, 0, 0.1);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .car-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .car-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .car-info {
+            padding: 20px;
+        }
+
+        .car-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .car-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .car-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .car-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .car-price small {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .car-features {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .car-feature {
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Process Section */
+        .process-section {
+            background-color: white;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #f0f0f0;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .step h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 0 16px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 24px 0;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding-bottom: 24px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-brand p {
+            color: #bdc3c7;
+            font-size: 14px;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 13px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                padding: 16px 0;
+                flex-wrap: wrap;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                人人车
+                <span>官网</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">看车</a>
+                <a href="#">卖车</a>
+                <a href="#">服务保障</a>
+                <a href="#">关于我们</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">免费卖车</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>严选二手车，买得放心</h1>
+                <p>超过 100 万台严选车源，透明报价，专业验车，人人车致力于为您提供最可信赖的二手车交易服务。</p>
+                
+                <div class="hero-tags">
+                    <div class="tag"><span class="tag-icon">✓</span> 严选车源</div>
+                    <div class="tag"><span class="tag-icon">✓</span> 透明报价</div>
+                    <div class="tag"><span class="tag-icon">✓</span> 专业验车</div>
+                    <div class="tag"><span class="tag-icon">✓</span> 无忧售后</div>
+                </div>
+
+                <div class="search-container">
+                    <form class="search-box" onsubmit="event.preventDefault();">
+                        <input type="text" class="search-input" placeholder="搜索品牌、车型或价格...">
+                        <button type="submit" class="search-btn">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>严选车源</h3>
+                        <p>100% 严选，车况透明</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        </div>
+                        <h3>透明报价</h3>
+                        <p>一口价，无隐藏费用</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
+                        <h3>专业验车</h3>
+                        <p>80项专业检测标准</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <h3>无忧售后</h3>
+                        <p>300天质保，送修上门</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Cars -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">严选车源推荐</h2>
+                    <a href="#" class="section-link">查看更多 ></a>
+                </div>
+                <div class="car-grid">
+                    <!-- Car Card 1 -->
+                    <article class="car-card">
+                        <div class="car-image">
+                            <img src="https://picsum.photos/seed/car1/400/300" alt="2020款 宝马 3系">
+                            <span class="car-badge">高性价比</span>
+                        </div>
+                        <div class="car-info">
+                            <h3 class="car-title">2020款 宝马 3系 325Li M运动套装</h3>
+                            <div class="car-meta">
+                                <span>2020年</span>
+                                <span>2.0T</span>
+                                <span>自动</span>
+                                <span>5.6万公里</span>
+                            </div>
+                            <div class="car-price">¥ 24.58万<small>起</small></div>
+                            <div class="car-features">
+                                <span class="car-feature">🛡️ 300天质保</span>
+                                <span class="car-feature">🔧 全车检测</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Car Card 2 -->
+                    <article class="car-card">
+                        <div class="car-image">
+                            <img src="https://picsum.photos/seed/car2/400/300" alt="2021款 奥迪 A4L">
+                            <span class="car-badge">热销</span>
+                        </div>
+                        <div class="car-info">
+                            <h3 class="car-title">2021款 奥迪 A4L 40TFSI 时尚动感型</h3>
+                            <div class="car-meta">
+                                <span>2021年</span>
+                                <span>2.0T</span>
+                                <span>自动</span>
+                                <span>3.2万公里</span>
+                            </div>
+                            <div class="car-price">¥ 26.99万<small>起</small></div>
+                            <div class="car-features">
+                                <span class="car-feature">🛡️ 300天质保</span>
+                                <span class="car-feature">🔧 全车检测</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Car Card 3 -->
+                    <article class="car-card">
+                        <div class="car-image">
+                            <img src="https://picsum.photos/seed/car3/400/300" alt="2019款 奔驰 C级">
+                        </div>
+                        <div class="car-info">
+                            <h3 class="car-title">2019款 奔驰 C级 C 200 L 运动版</h3>
+                            <div class="car-meta">
+                                <span>2019年</span>
+                                <span>1.5T</span>
+                                <span>自动</span>
+                                <span>6.8万公里</span>
+                            </div>
+                            <div class="car-price">¥ 23.88万<small>起</small></div>
+                            <div class="car-features">
+                                <span class="car-feature">🛡️ 300天质保</span>
+                                <span class="car-feature">🔧 全车检测</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Car Card 4 -->
+                    <article class="car-card">
+                        <div class="car-image">
+                            <img src="https://picsum.photos/seed/car4/400/300" alt="2020款 凯美瑞">
+                        </div>
+                        <div class="car-info">
+                            <h3 class="car-title">2020款 丰田 凯美瑞 2.5Q 锐尚版</h3>
+                            <div class="car-meta">
+                                <span>2020年</span>
+                                <span>2.5L</span>
+                                <span>CVT</span>
+                                <span>4.1万公里</span>
+                            </div>
+                            <div class="car-price">¥ 19.99万<small>起</small></div>
+                            <div class="car-features">
+                                <span class="car-feature">🛡️ 300天质保</span>
+                                <span class="car-feature">🔧 全车检测</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section process-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">交易流程</h2>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h3>在线咨询</h3>
+                        <p>联系客服，提供车辆信息，获取精准报价</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h3>上门检测</h3>
+                        <p>专业验车师上门检测，确认车况与价格</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h3>快速成交</h3>
+                        <p>签订合同，款项即时到账，手续快捷办理</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <h3>无忧交付</h3>
+                        <p>协助过户，提供车辆保养与质保服务</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">人人车的车源都是哪里来的？ <span>+</span></div>
+                        <div class="faq-answer">
+                            人人车平台的车源主要来自个人车主委托出售。我们要求车主提供车辆原始购车发票、保养记录等关键资料，并由我们的专业验车团队进行严格的80项检测，确保车况透明真实。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">购买二手车有哪些保障？ <span>+</span></div>
+                        <div class="faq-answer">
+                            我们提供300天质保服务，涵盖发动机、变速箱等核心部件。如果车辆在质保期内出现非人为损坏的故障，人人车提供免费维修或更换服务。此外，所有车辆均经过专业检测，无重大事故、水泡、火烧记录。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何支付车款？ <span>+</span></div>
+                        <div class="faq-answer">
+                            我们支持多种支付方式，包括银行转账、支付宝、微信支付等。在交易完成后，款项会直接打入经过认证的卖方账户，确保交易安全，杜绝跑单风险。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>人人车</h2>
+                    <p>人人车是国内领先的二手车交易平台，致力于通过严选车源、透明报价和无忧售后，为用户提供简单、安全、可信赖的二手车交易体验。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">媒体报道</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">新手指南</a></li>
+                        <li><a href="#">交易流程</a></li>
+                        <li><a href="#">质保政策</a></li>
+                        <li><a href="#">售后保障</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">用户社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 人人车二手车交易平台 版权所有 | 京ICP备XXXXXXXX号
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
